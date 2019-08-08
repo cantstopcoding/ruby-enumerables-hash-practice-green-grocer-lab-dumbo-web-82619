@@ -56,6 +56,6 @@ def checkout(cart, coupons)
   everything_applied_cart.each do |item_name, item_info|
     price += item_info[:price] * item_info[:count]
   end 
-  price > 100 ? (total * 0.9).round(2) : total
+  price > 100 ? (price * 0.9).round(2) : price
 end
 
